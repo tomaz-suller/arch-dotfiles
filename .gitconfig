@@ -1,2 +1,5 @@
 [init]
 	defaultBranch = main
+[user]
+	email = tomaz.suller@usp.br
+	name = tomaz-suller
