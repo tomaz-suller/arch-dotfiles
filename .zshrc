@@ -34,6 +34,10 @@ alias gcm="git commit -m"
 alias gca="git commit --amend"
 alias gch="git checkout"
 
+## Backup
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
+
+
 ## Color
 alias grep="grep --color=always"
 alias ll="ls -al --color"
@@ -41,7 +45,6 @@ alias ll="ls -al --color"
 alias feh="feh -g 960x540 --scale-down"
 alias pacman="sudo pacman"
 alias spt="spotifyd && spt"
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
 
 # Qt Applicatios theme
 export QT_STYLE_OVERRIDE="Breeze-Dark"

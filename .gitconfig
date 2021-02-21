@@ -3,3 +3,5 @@
 [user]
 	email = tomaz.suller@usp.br
 	name = tomaz-suller
+[pull]
+	rebase = false
