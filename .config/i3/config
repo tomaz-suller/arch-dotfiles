@@ -201,4 +201,6 @@ exec --no-startup-id mpd
 exec --no-startup-id nitrogen --restore
 # Set keyboatd layout to br (apparently i3 doesn't like system default)
 exec --no-startup-id setxkbmap br
+# Start clight
+exec --no-startup-id clight
 ########################
