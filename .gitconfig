@@ -5,3 +5,5 @@
 	name = tomaz-suller
 [pull]
 	rebase = false
+[core]
+	editor = vim
