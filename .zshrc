@@ -42,9 +42,10 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
 alias grep="grep --color=always"
 alias ls="ls --color"
 alias ll="ls -al --color"
+alias tree="tree -C"
 
 alias feh="feh -g 960x540 --scale-down"
-alias pacman="sudo pacman"
+alias pacman="sudo pacman --color always"
 alias spt="spotifyd && spt"
 
 # Qt Applicatios theme
@@ -61,4 +62,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75,bg=#073642"
 
 # Set bat as the default system pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export FONTCONFIG_PATH=/etc/fonts/
 
