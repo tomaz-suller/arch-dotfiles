@@ -12,7 +12,7 @@ compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
+HISTSIZE=10000
 SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -22,6 +22,8 @@ bindkey -v
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then 
 	exec ssh-agent startx
 fi
+
+export PATH="$PATH":"$HOME"/.local/bin
 
 # Custom aliases
 
@@ -63,5 +65,4 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75,bg=#073642"
 # Set bat as the default system pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-export FONTCONFIG_PATH=/etc/fonts/
 
