@@ -1,7 +1,0 @@
-[Default Applications]
-x-scheme-handler/webcal=brave-browser.desktop
-x-scheme-handler/mailto=brave-browser.desktop
-application/pdf=xreader.desktop
-
-[Added Associations]
-application/pdf=xreader.desktop;

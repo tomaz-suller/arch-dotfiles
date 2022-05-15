@@ -23,6 +23,15 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec ssh-agent startx
 fi
 
+# Configure history file
+HISTSIZE=2000
+SAVEHIST=10000
+HISTFILE="$HOME/.histfile"
+## Ignore duplicate commands
+setopt HIST_IGNORE_ALL_DUPS
+## Write commands to $HISTFILE as soon as they are executed
+setopt INC_APPEND_HISTORY
+
 export PATH="$PATH":"$HOME"/.local/bin
 
 # Custom aliases
@@ -36,6 +45,9 @@ alias gcm="git commit -m"
 alias gca="git commit --amend"
 alias gch="git checkout"
 
+## tmux
+alias tmuxk="tmux kill-server"
+
 ## Dotfile Backup
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
 
@@ -45,10 +57,12 @@ alias grep="grep --color=always"
 alias ls="ls --color"
 alias ll="ls -al --color"
 alias tree="tree -C"
-
-alias feh="feh -g 960x540 --scale-down"
 alias pacman="sudo pacman --color always"
+
+## Misc
+alias feh="feh -g 960x540 --scale-down"
 alias spt="spotifyd && spt"
+alias venv="python -m venv"
 
 # Qt Applicatios theme
 export QT_STYLE_OVERRIDE="Breeze-Dark"
@@ -65,4 +79,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75,bg=#073642"
 # Set bat as the default system pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# Intel Quartus Prime environment variables
+export QSYS_ROOTDIR="/usr/local/src/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
+export LM_LICENSE_FILE="/home/tomaz/Quartus/LR-068848_License.dat"
 
