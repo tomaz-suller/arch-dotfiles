@@ -193,7 +193,7 @@ for_window [class="feh"] floating enable
 for_window [class=".*"] border pixel 3
 
 ########################
-bindsym $mod+Shift+Return exec xdg-open "https://"
+bindsym $mod+Shift+Return exec brave
 bindsym $mod+space exec --no-startup-id "rofi -modi run,drun -show drun -theme solarized"
 bindsym $mod+Shift+n exec pcmanfm ~ -n
 bindsym $mod+KP_Divide workspace prev

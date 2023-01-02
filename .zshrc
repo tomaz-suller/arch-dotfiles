@@ -18,11 +18,6 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 ###############################################################################################
 
-# Start X at login (from Arch Wiki)
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then 
-	exec ssh-agent startx
-fi
-
 # Configure history file
 HISTSIZE=2000
 SAVEHIST=10000
@@ -33,6 +28,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY
 
 export PATH="$PATH":"$HOME"/.local/bin
+export VISUAL='vim'
 
 # Custom aliases
 
@@ -55,13 +51,12 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
 ## Color
 alias grep="grep --color=always"
 alias ls="ls --color"
-alias ll="ls -al --color"
+alias ll="ls -alh --color"
 alias tree="tree -C"
 alias pacman="sudo pacman --color always"
 
 ## Misc
 alias feh="feh -g 960x540 --scale-down"
-alias spt="spotifyd && spt"
 alias venv="python -m venv"
 
 # Qt Applicatios theme
