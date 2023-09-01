@@ -27,7 +27,7 @@ setopt HIST_IGNORE_ALL_DUPS
 ## Write commands to $HISTFILE as soon as they are executed
 setopt INC_APPEND_HISTORY
 
-export PATH="$PATH":"$HOME"/.local/bin
+export PATH="$PATH":"$HOME"/.local/bin:/"$HOME"/.cargo/bin
 export VISUAL='vim'
 
 # Custom aliases
@@ -58,6 +58,7 @@ alias pacman="sudo pacman --color always"
 ## Misc
 alias feh="feh -g 960x540 --scale-down"
 alias venv="python -m venv"
+alias x="startx"
 
 # Qt Applicatios theme
 export QT_STYLE_OVERRIDE="Breeze-Dark"
@@ -72,7 +73,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75,bg=#073642"
 
 # Set bat as the default system pager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+MANPAGER="sh -c 'col -bx | bat -l man -p --wrap=never'"
 
 # Intel Quartus Prime environment variables
 export QSYS_ROOTDIR="/usr/local/src/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
